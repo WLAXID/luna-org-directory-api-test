@@ -361,5 +361,5 @@ set PYTHONIOENCODING=utf-8
 
 После запуска сервера документация доступна по адресам:
 - **Swagger UI**: http://localhost:8000/docs
-- **ReDoc**: http://localhost:8000/redoc
+- **ReDoc**: http://localhost:8080/static_redoc.html
 - **OpenAPI JSON**: http://localhost:8000/openapi.json

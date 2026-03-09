@@ -107,7 +107,7 @@ pip install -e .
 4. **Настройка переменных окружения**
 Создайте файл `.env` в корне проекта:
 ```env
-API_KEY=your-secret-api-key
+API_KEY=dev-api-key-12345
 DATABASE_URL=sqlite:///./data/organizations.db
 DEBUG=true
 CORS_ORIGINS=["*"]

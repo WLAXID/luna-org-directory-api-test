@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "luna-org-directory-api"
+version = "1.0.0"
+description = "REST API for organization directory"
+authors = [{name = "Developer", email = "dev@example.com"}]
+license = {text = "MIT"}
+requires-python = ">=3.8"
+dependencies = [
+    "fastapi[all]==0.104.1",
+    "uvicorn[standard]==0.24.0",
+    "sqlalchemy==2.0.23",
+    "alembic==1.12.1",
+    "pydantic==2.5.0",
+    "pydantic-settings==2.1.0",
+    "phonenumberslite==8.13.26",
+    "faker==20.1.0",
+    "python-multipart==0.0.6",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest==7.4.3",
+    "pytest-asyncio==0.21.1",
+    "httpx==0.25.2",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["app*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+asyncio_mode = "auto"

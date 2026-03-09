@@ -56,7 +56,7 @@ python -m alembic upgrade head
 python data/seed_data.py 50
 
 # 5. Запуск сервера
-uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
+uvicorn app.main:app --reload --host localhost --port 8000
 ```
 
 ### Способ 2: Docker (рекомендуется)
